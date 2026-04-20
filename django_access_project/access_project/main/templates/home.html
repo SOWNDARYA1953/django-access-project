@@ -1,0 +1,11 @@
+<h2>Home</h2>
+
+<p>User: {{ request.user.username }}</p>
+
+<ul>
+    {% for item in items %}
+        <li>{{ item.name }}</li>
+    {% empty %}
+        <li>No items</li>
+    {% endfor %}
+</ul>
